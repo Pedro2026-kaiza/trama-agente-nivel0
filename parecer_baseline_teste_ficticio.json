@@ -1,0 +1,403 @@
+{
+  "evidencias_extraidas": [
+    {
+      "id": "EV-0001",
+      "fonte": "LinkedIn - Post",
+      "trecho": "Passei os últimos meses pensando em como produtos financeiros para microempreendedores falham quando tratam 'educação financeira' como um curso, e não como uma jornada com propósito por trás. O que fez diferença de verdade não foi ensinar conceito, foi conectar aprendizado a um sonho concreto da pessoa.",
+      "contexto": "Post próprio no LinkedIn. Link: https://www.linkedin.com/posts/test-profile_activity-0001. Visibilidade: Visible to anyone on or off LinkedIn.",
+      "data": "2023-02-14",
+      "tema": "Produto"
+    },
+    {
+      "id": "EV-0002",
+      "fonte": "LinkedIn - Comentário",
+      "trecho": "Concordo em parte, mas eu adicionaria uma camada: o problema raramente é a falta de dado, é a falta de alguém traduzindo esse dado em uma decisão que o time de negócio confia. Já vi times com dashboard excelente e zero decisão mudando por causa dele.",
+      "contexto": "Comentário feito em post de terceiros. Link do post comentado: https://www.linkedin.com/posts/other-user_activity-1001. Nota: exportação nativa do LinkedIn só traz comentários feitos pelo próprio usuário, não recebidos.",
+      "data": "2023-03-08",
+      "tema": "Dados e Decisão"
+    },
+    {
+      "id": "EV-0003",
+      "fonte": "LinkedIn - Post",
+      "trecho": "Um erro comum em times de produto: medir adoção de uma funcionalidade isoladamente, sem entender o ecossistema em que ela vive. Produto não é uma ilha, é um braço de um polvo maior — se você não mapeia os outros braços, otimiza a parte errada.",
+      "contexto": "Post próprio no LinkedIn. Link: https://www.linkedin.com/posts/test-profile_activity-0002. Visibilidade: Visible to anyone on or off LinkedIn.",
+      "data": "2023-05-02",
+      "tema": "Produto"
+    },
+    {
+      "id": "EV-0004",
+      "fonte": "LinkedIn - Artigo",
+      "trecho": "Produto não é uma ilha: pensando em ecossistema antes de feature",
+      "contexto": "Artigo publicado no LinkedIn. Link: https://www.linkedin.com/pulse/test-article-0001.",
+      "data": "2023-06-12",
+      "tema": "Produto"
+    },
+    {
+      "id": "EV-0005",
+      "fonte": "LinkedIn - Comentário",
+      "trecho": "Isso bate com uma experiência que tive gerindo uma ferramenta de gestão financeira para um público não bancarizado: o obstáculo não era o produto ser complexo, era o produto não conversar com o momento de vida da pessoa.",
+      "contexto": "Comentário feito em post de terceiros. Link do post comentado: https://www.linkedin.com/posts/other-user_activity-1002. Nota: exportação nativa do LinkedIn só traz comentários feitos pelo próprio usuário, não recebidos.",
+      "data": "2023-07-21",
+      "tema": "Produto"
+    },
+    {
+      "id": "EV-0006",
+      "fonte": "LinkedIn - Post",
+      "trecho": "Reflexão sobre mentoria: o modelo que mais funcionou no time que liderei não foi aula com especialista, foi colocar quem já passou pela dor recente como mentor de quem está passando agora. A proximidade da experiência importa mais que o gabarito técnico.",
+      "contexto": "Post próprio no LinkedIn. Link: https://www.linkedin.com/posts/test-profile_activity-0003. Visibilidade: Visible to anyone on or off LinkedIn.",
+      "data": "2023-09-19",
+      "tema": "Liderança e Mentoria"
+    },
+    {
+      "id": "EV-0007",
+      "fonte": "LinkedIn - Comentário",
+      "trecho": "Boa provocação. No meu caso o que resolveu não foi simplificar a interface, foi simplificar a jornada de decisão — reduzir o número de escolhas que a pessoa precisava fazer antes de sentir progresso.",
+      "contexto": "Comentário feito em post de terceiros. Link do post comentado: https://www.linkedin.com/posts/other-user_activity-1003. Nota: exportação nativa do LinkedIn só traz comentários feitos pelo próprio usuário, não recebidos.",
+      "data": "2023-12-02",
+      "tema": "Dados e Decisão"
+    },
+    {
+      "id": "EV-0008",
+      "fonte": "LinkedIn - Post",
+      "trecho": "Fico incomodado quando um projeto de tecnologia perde de vista a pessoa do outro lado. Prefiro sistemas complexos que resolvem um problema real de alguém a sistemas elegantes que resolvem um problema de outro sistema.",
+      "contexto": "Post próprio no LinkedIn. Link: https://www.linkedin.com/posts/test-profile_activity-0004. Visibilidade: Visible to anyone on or off LinkedIn.",
+      "data": "2024-01-11",
+      "tema": "Tecnologia"
+    },
+    {
+      "id": "EV-0009",
+      "fonte": "LinkedIn - Comentário",
+      "trecho": "Discordo um pouco do ponto sobre métricas de vaidade. Às vezes uma métrica 'de vaidade' é o único jeito de dar visibilidade interna para um resultado que ainda não virou número de negócio — o risco é parar nela, não usá-la.",
+      "contexto": "Comentário feito em post de terceiros. Link do post comentado: https://www.linkedin.com/posts/other-user_activity-1004. Nota: exportação nativa do LinkedIn só traz comentários feitos pelo próprio usuário, não recebidos.",
+      "data": "2024-02-17",
+      "tema": "Dados e Decisão"
+    },
+    {
+      "id": "EV-0010",
+      "fonte": "LinkedIn - Artigo",
+      "trecho": "O que aprendi tratando educação financeira como jornada, não como curso",
+      "contexto": "Artigo publicado no LinkedIn. Link: https://www.linkedin.com/pulse/test-article-0002.",
+      "data": "2024-03-04",
+      "tema": "Finanças e Crédito"
+    },
+    {
+      "id": "EV-0011",
+      "fonte": "LinkedIn - Post",
+      "trecho": "Mudei de ideia sobre scoring de crédito para microempreendedores. Achava que o histórico de pagamento bastava. Depois de ver de perto o ciclo de reinvestimento de quem está começando, entendi que o comportamento de reinvestir é um sinal tão forte quanto o de pagar em dia — e ninguém media isso.",
+      "contexto": "Post próprio no LinkedIn. Link: https://www.linkedin.com/posts/test-profile_activity-0005. Visibilidade: Visible to anyone on or off LinkedIn.",
+      "data": "2024-04-30",
+      "tema": "Finanças e Crédito"
+    },
+    {
+      "id": "EV-0012",
+      "fonte": "LinkedIn - Comentário",
+      "trecho": "Vivi isso na prática: montamos um programa de mentoria entre pares antes de ter processo formalizado, e a adesão foi maior do que qualquer treinamento estruturado que já rodamos depois.",
+      "contexto": "Comentário feito em post de terceiros. Link do post comentado: https://www.linkedin.com/posts/other-user_activity-1005. Nota: exportação nativa do LinkedIn só traz comentários feitos pelo próprio usuário, não recebidos.",
+      "data": "2024-08-05",
+      "tema": "Liderança e Mentoria"
+    },
+    {
+      "id": "EV-0013",
+      "fonte": "LinkedIn - Artigo",
+      "trecho": "Mentoria de pares: por que proximidade da dor vence gabarito técnico",
+      "contexto": "Artigo publicado no LinkedIn. Link: https://www.linkedin.com/pulse/test-article-0003.",
+      "data": "2024-10-15",
+      "tema": "Liderança e Mentoria"
+    },
+    {
+      "id": "EV-0014",
+      "fonte": "LinkedIn - Post",
+      "trecho": "Empreender do zero ensina uma coisa que nenhum cargo de produto ensina: o custo de cada decisão errada é imediato e visível. Isso muda a forma como eu penso hipótese de produto — cada uma tem que provar valor rápido, ou é descartada.",
+      "contexto": "Post próprio no LinkedIn. Link: https://www.linkedin.com/posts/test-profile_activity-0006. Visibilidade: Visible to anyone on or off LinkedIn.",
+      "data": "2024-11-06",
+      "tema": "Produto"
+    },
+    {
+      "id": "EV-0015",
+      "fonte": "LinkedIn - Comentário",
+      "trecho": "Ponto importante. Eu só adicionaria que esse tipo de mudança de abordagem geralmente esbarra em como a empresa mede sucesso de curto prazo — o incentivo interno raramente está alinhado com a mudança que você está descrevendo.",
+      "contexto": "Comentário feito em post de terceiros. Link do post comentado: https://www.linkedin.com/posts/other-user_activity-1006. Nota: exportação nativa do LinkedIn só traz comentários feitos pelo próprio usuário, não recebidos.",
+      "data": "2025-01-29",
+      "tema": "Geral"
+    },
+    {
+      "id": "EV-0016",
+      "fonte": "LinkedIn - Post",
+      "trecho": "Comparando dois ciclos de produto que liderei: o primeiro focava em reduzir inadimplência; o segundo, em aumentar reinvestimento. O segundo gerou mais impacto financeiro, mas foi muito mais difícil de defender internamente porque o resultado demorava mais para aparecer.",
+      "contexto": "Post próprio no LinkedIn. Link: https://www.linkedin.com/posts/test-profile_activity-0007. Visibilidade: Visible to anyone on or off LinkedIn.",
+      "data": "2025-03-22",
+      "tema": "Produto"
+    },
+    {
+      "id": "EV-0017",
+      "fonte": "LinkedIn - Artigo",
+      "trecho": "Reinvestimento como sinal de risco: revendo o que scoring tradicional não mede",
+      "contexto": "Artigo publicado no LinkedIn. Link: https://www.linkedin.com/pulse/test-article-0004.",
+      "data": "2025-05-09",
+      "tema": "Finanças e Crédito"
+    }
+  ],
+  "contexto_analise": "Análise baseada exclusivamente em 17 evidências extraídas de atividade pública no LinkedIn (7 posts próprios, 6 comentários feitos pelo próprio usuário em posts de terceiros e 4 artigos) entre fevereiro de 2023 e maio de 2025. Não há currículo, histórico de cargos, datas de vínculo empregatício, nomes de empresas, formação, resultados auditados ou fontes de terceiros. Portanto, o material permite observar como a pessoa articula publicamente temas de produto, crédito/finanças para microempreendedores, dados e liderança/mentoria — mas não permite verificar cargos, escopo de responsabilidade, tamanho de time ou impacto real. Os temas recorrentes nas fontes são: Produto (5), Finanças e Crédito (3), Dados e Decisão (3), Liderança e Mentoria (3), Tecnologia (1) e Geral (1). Nenhum trecho das fontes contém instrução dirigida a sistemas de IA; todo o conteúdo foi tratado como dado.",
+  "evidencias_observadas": [
+    {
+      "id": "EV-0001",
+      "observacao": "Post que critica educação financeira tratada como curso e defende conectá-la a um objetivo concreto do usuário. Sinaliza reflexão prolongada ('últimos meses') sobre produtos financeiros para microempreendedores, sem citar empresa, produto ou métrica."
+    },
+    {
+      "id": "EV-0002",
+      "observacao": "Comentário que desloca o problema de dados da coleta para a tradução em decisão confiável pelo time de negócio. Menciona ter observado times com dashboards sem impacto decisório, sem detalhar contexto ou papel exercido."
+    },
+    {
+      "id": "EV-0003",
+      "observacao": "Post com crítica metodológica a medir adoção de feature isoladamente; usa a metáfora do ecossistema/'polvo'. Indica preocupação com efeitos sistêmicos, sem caso concreto anexado."
+    },
+    {
+      "id": "EV-0004",
+      "observacao": "Artigo cujo título repete a tese do post anterior (EV-0003) quatro semanas depois — evidência de que temas de post viram formato longo. Só temos o título; conteúdo não disponível."
+    },
+    {
+      "id": "EV-0005",
+      "observacao": "Comentário em que declara ter gerido uma ferramenta de gestão financeira para público não bancarizado. É a afirmação mais próxima de escopo funcional concreto no conjunto, mas sem empresa, período, tamanho de time ou resultado."
+    },
+    {
+      "id": "EV-0006",
+      "observacao": "Post que afirma ter liderado um time e que o modelo de mentoria mais eficaz foi entre pares com dor recente, não com especialista. Declara liderança sem indicar nível, número de pessoas ou período."
+    },
+    {
+      "id": "EV-0007",
+      "observacao": "Comentário que descreve intervenção específica: reduzir número de escolhas antes do usuário sentir progresso, em vez de simplificar a interface. Fala em primeira pessoa ('no meu caso'), sem identificar produto ou métrica de resultado."
+    },
+    {
+      "id": "EV-0008",
+      "observacao": "Post de posicionamento: prioriza problema real do usuário sobre elegância técnica. Expressa incômodo com projetos de tecnologia que perdem a pessoa de vista; é declaração de valor, não relato de entrega."
+    },
+    {
+      "id": "EV-0009",
+      "observacao": "Comentário que discorda parcialmente do consenso sobre 'métricas de vaidade', argumentando que podem servir de ponte de visibilidade interna. Mostra disposição a divergir publicamente com ressalva ('o risco é parar nela')."
+    },
+    {
+      "id": "EV-0010",
+      "observacao": "Artigo cujo título retoma a tese de EV-0001 cerca de treze meses depois, agora enquadrado como aprendizado. Apenas título disponível."
+    },
+    {
+      "id": "EV-0011",
+      "observacao": "Post que relata mudança de opinião explícita sobre scoring de crédito, incorporando comportamento de reinvestimento como sinal de risco. Cita observação de campo ('ver de perto o ciclo de reinvestimento'), sem indicar se a ideia foi implementada."
+    },
+    {
+      "id": "EV-0012",
+      "observacao": "Comentário que descreve execução em primeira pessoa do plural ('montamos') de um programa de mentoria entre pares antes de processo formal, com comparação qualitativa de adesão. Não há números nem definição do papel da pessoa nessa iniciativa."
+    },
+    {
+      "id": "EV-0013",
+      "observacao": "Artigo cujo título consolida a tese de mentoria entre pares (EV-0006, EV-0012). Terceiro caso de post/comentário que evolui para artigo."
+    },
+    {
+      "id": "EV-0014",
+      "observacao": "Post que afirma experiência de empreender do zero e contrasta esse aprendizado com 'cargo de produto', derivando um princípio de validação rápida de hipóteses. Sugere trajetória com empreendedorismo e cargos de produto, sem cronologia."
+    },
+    {
+      "id": "EV-0015",
+      "observacao": "Comentário que aponta desalinhamento entre incentivos internos de curto prazo e mudanças de abordagem. Observação organizacional/política, sem caso identificado."
+    },
+    {
+      "id": "EV-0016",
+      "observacao": "Post que compara dois ciclos de produto liderados — inadimplência versus reinvestimento — afirmando maior impacto financeiro no segundo e maior dificuldade de defesa interna. Afirmação de resultado sem número, fonte ou período."
+    },
+    {
+      "id": "EV-0017",
+      "observacao": "Artigo cujo título formaliza a tese de reinvestimento como sinal de risco (EV-0011, EV-0016), cerca de treze meses após o post original. Apenas título disponível."
+    }
+  ],
+  "padroes_emergentes": [
+    "Ciclo consistente de amadurecimento de ideia: um tema aparece primeiro em post ou comentário e reaparece meses depois como artigo com título quase idêntico à tese original — ecossistema (EV-0003 → EV-0004, ~1 mês), educação financeira como jornada (EV-0001 → EV-0010, ~13 meses), mentoria de pares (EV-0006/EV-0012 → EV-0013), reinvestimento como sinal de crédito (EV-0011/EV-0016 → EV-0017).",
+    "Concentração temática estável em um mesmo domínio ao longo de 27 meses: produtos financeiros para microempreendedores e público não bancarizado (EV-0001, EV-0005, EV-0010, EV-0011, EV-0016, EV-0017).",
+    "Recorrência de um mesmo argumento central em contextos diferentes: o obstáculo raramente é técnico ou de interface, é de conexão com o momento/jornada de decisão da pessoa (EV-0001, EV-0005, EV-0007, EV-0008).",
+    "Atenção recorrente à dimensão política/organizacional da decisão — visibilidade interna, confiança do time de negócio, incentivos de curto prazo, dificuldade de defender resultados lentos (EV-0002, EV-0009, EV-0015, EV-0016).",
+    "Padrão de discordância argumentada e não confrontacional em comentários: começa validando o interlocutor e depois adiciona ou contesta uma camada (EV-0002, EV-0007, EV-0009, EV-0015).",
+    "Disposição declarada a revisar a própria posição, expressa de forma explícita (EV-0011) e a comparar criticamente experiências próprias (EV-0016, EV-0014).",
+    "Preferência por evidência vivida e proximidade da experiência sobre autoridade formal — tanto em mentoria (EV-0006, EV-0013) quanto em aprendizado de produto via empreendedorismo (EV-0014).",
+    "Ausência sistemática de números, nomes de empresas, produtos, períodos e tamanhos de time em todas as 17 evidências; as afirmações de resultado são qualitativas (EV-0012, EV-0016)."
+  ],
+  "narrativa_profissional": "As fontes desenham uma pessoa que, entre fevereiro de 2023 e maio de 2025, publicou de forma regular sobre um núcleo temático estável: produtos financeiros voltados a microempreendedores e público não bancarizado, com desdobramentos em produto, uso de dados para decisão e liderança/mentoria. O material é autodeclarado e reflexivo — descreve princípios e aprendizados mais do que entregas verificáveis.\n\nNo eixo de produto, o discurso parte de uma crítica a abordagens instrucionais ('educação financeira como curso', EV-0001) e evolui para uma leitura sistêmica (produto como parte de um ecossistema, EV-0003/EV-0004) e para intervenções de jornada, como reduzir o número de escolhas até o usuário sentir progresso (EV-0007). Em 2024, aparece um enquadramento de origem: a experiência de empreender do zero teria moldado a exigência de que hipóteses provem valor rápido (EV-0014).\n\nNo eixo de crédito, há uma trajetória rastreável: uma mudança de opinião declarada sobre scoring, incorporando reinvestimento como sinal de risco (EV-0011, abril/2024), a comparação entre dois ciclos de produto liderados — inadimplência versus reinvestimento (EV-0016, março/2025) — e a formalização da tese em artigo (EV-0017, maio/2025). O relato inclui, junto com o suposto ganho, a dificuldade de sustentar internamente um resultado de maturação lenta, tema que também aparece de forma abstrata em EV-0015.\n\nNo eixo de liderança, a pessoa afirma ter liderado um time (EV-0006) e ter participado da montagem de um programa de mentoria entre pares antes de haver processo formal (EV-0012), com a tese consolidada em artigo (EV-0013). O critério declarado é a proximidade da dor sobre o gabarito técnico.\n\nO que não sabemos é substancial: não há cargos, empresas, datas de vínculo, escopo, tamanho de time, tecnologias, formação, nem qualquer métrica. A narrativa disponível é a narrativa que a própria pessoa escolheu publicar.",
+  "forcas_evidenciadas": [
+    "Consistência temática e continuidade de pensamento por mais de dois anos no mesmo domínio, sem dispersão aparente de assunto (EV-0001, EV-0005, EV-0010, EV-0011, EV-0016, EV-0017).",
+    "Capacidade demonstrada de transformar observação pontual em tese estruturada e publicá-la em formato longo (EV-0003→EV-0004; EV-0006/EV-0012→EV-0013; EV-0011/EV-0016→EV-0017).",
+    "Articulação clara por escrito, com uso de contrastes e analogias para explicar decisões de produto (EV-0003, EV-0008, EV-0014).",
+    "Disposição declarada a revisar a própria posição publicamente e a nomear o que mudou e por quê (EV-0011).",
+    "Discordância pública com consenso do próprio campo, formulada com ressalva e argumento em vez de negação simples (EV-0009, EV-0002).",
+    "Sensibilidade declarada ao contexto organizacional em que uma decisão precisa sobreviver — incentivos, visibilidade interna e confiança de stakeholders (EV-0002, EV-0009, EV-0015, EV-0016).",
+    "Foco declarado e recorrente no usuário final e no seu momento de vida como critério de decisão de produto (EV-0001, EV-0005, EV-0007, EV-0008)."
+  ],
+  "tensoes_e_lacunas": [
+    "Não sabemos qual foi o papel formal da pessoa em nenhuma das iniciativas citadas. 'Gerindo uma ferramenta' (EV-0005), 'o time que liderei' (EV-0006), 'montamos' (EV-0012) e 'dois ciclos de produto que liderei' (EV-0016) são autodeclarações sem cargo, empresa, período ou escopo.",
+    "Nenhuma evidência traz número, baseline ou fonte de verificação. A afirmação de que o segundo ciclo 'gerou mais impacto financeiro' (EV-0016) e a de maior adesão da mentoria de pares (EV-0012) são comparações qualitativas não auditáveis por estas fontes.",
+    "Tensão possível — não resolvida — entre o princípio de que cada hipótese 'tem que provar valor rápido, ou é descartada' (EV-0014) e a defesa de um ciclo cujo 'resultado demorava mais para aparecer' (EV-0016). Pode ser incoerência, pode ser distinção entre velocidade de validação e velocidade de resultado financeiro; as fontes não permitem decidir.",
+    "Não sabemos se a tese de reinvestimento como sinal de risco (EV-0011, EV-0017) chegou a ser implementada em um modelo de scoring real, testada ou apenas argumentada conceitualmente.",
+    "O conjunto é composto integralmente de material autoral e público, sem nenhuma fonte de terceiros. Como registra o próprio contexto das evidências, a exportação nativa do LinkedIn não traz comentários recebidos — logo, não há como observar reações, contestações ou validação externa às teses.",
+    "Não há evidência sobre profundidade técnica. EV-0008 expressa uma preferência de valor entre 'sistemas complexos' e 'sistemas elegantes', mas nenhuma fonte indica linguagens, arquitetura, ferramentas de dados ou envolvimento hands-on. Ausência de evidência não é evidência de ausência.",
+    "Não há qualquer informação sobre cronologia de carreira, formação, setores anteriores, transições, período de empreendedorismo (EV-0014) ou situação atual.",
+    "Há uma lacuna de publicação entre março/2025 (EV-0016) e maio/2025 (EV-0017), e nenhuma evidência posterior; não sabemos o estado atual da atividade ou do vínculo profissional.",
+    "Não sabemos se a pessoa atuou majoritariamente em ambiente corporativo, em startup, em ONG/impacto social ou como empreendedora — EV-0014 sugere ao menos duas dessas experiências, sem ordem nem duração."
+  ],
+  "hipoteses": [
+    {
+      "id_hipotese": "H1",
+      "descricao": "A pessoa pode ter atuado em posição de produto com escopo em serviços financeiros para microempreendedores/não bancarizados, incluindo domínio de crédito, e não apenas em produto genérico.",
+      "evidencias_citadas": [
+        "EV-0005",
+        "EV-0011",
+        "EV-0016",
+        "EV-0001",
+        "EV-0017"
+      ],
+      "contexto": "Ao longo de 27 meses o mesmo público e o mesmo domínio (gestão financeira para não bancarizados, scoring, inadimplência, reinvestimento) reaparecem em posts, comentários e artigos, sempre em primeira pessoa e com referência a ciclos de produto liderados.",
+      "o_que_permanece_desconhecido": "Cargo, empresa, período, tamanho do time, se o escopo era discovery, delivery, ambos, e se o envolvimento com crédito era de produto, de risco ou de análise. Também não sabemos se foi uma única organização ou várias.",
+      "perguntas_validacao": [
+        "Em que organizações e períodos você trabalhou com produtos financeiros para microempreendedores, e qual era seu cargo em cada uma?",
+        "Nesses contextos, você respondia por produto, por risco de crédito, por dados, ou por uma combinação? Como o escopo era dividido com outras áreas?",
+        "Você poderia descrever a ferramenta de gestão financeira mencionada: qual era o público, o tamanho da base e sua responsabilidade específica?"
+      ],
+      "contradicao_entre_evidencias_citadas": false,
+      "confianca": "Alta"
+    },
+    {
+      "id_hipotese": "H2",
+      "descricao": "A pessoa pode ter um método pessoal de amadurecimento de ideias: observa em campo, testa a formulação em post ou comentário, e só depois consolida a tese em artigo — o que sugeriria uso da escrita pública como ferramenta de pensamento, e não apenas como divulgação.",
+      "evidencias_citadas": [
+        "EV-0003",
+        "EV-0004",
+        "EV-0006",
+        "EV-0012",
+        "EV-0013",
+        "EV-0011",
+        "EV-0016",
+        "EV-0017",
+        "EV-0001",
+        "EV-0010"
+      ],
+      "contexto": "Todos os quatro artigos do conjunto têm títulos que reproduzem quase literalmente uma tese formulada antes em post ou comentário, com intervalos que vão de cerca de um mês a treze meses.",
+      "o_que_permanece_desconhecido": "Se o padrão é intencional ou coincidência de repertório; se essa escrita tem alguma função no trabalho (alinhamento de time, documentação de decisão, posicionamento de marca pessoal, exigência da empresa); e o conteúdo real dos artigos, já que só temos títulos.",
+      "perguntas_validacao": [
+        "Como você usa a escrita no seu processo de trabalho — ela entra antes, durante ou depois de uma decisão de produto?",
+        "Os artigos que você publicou nasceram de discussões internas reais? Alguma dessas teses virou documento ou política dentro da empresa?",
+        "Houve alguma tese que você publicou e depois abandonou ao confrontá-la com dados?"
+      ],
+      "contradicao_entre_evidencias_citadas": false,
+      "confianca": "Alta"
+    },
+    {
+      "id_hipotese": "H3",
+      "descricao": "A pessoa pode ter experiência prática em conduzir mudanças que enfrentam resistência interna, tendo desenvolvido leitura sobre incentivos organizacionais e sobre como sustentar iniciativas de retorno lento.",
+      "evidencias_citadas": [
+        "EV-0016",
+        "EV-0015",
+        "EV-0009",
+        "EV-0002"
+      ],
+      "contexto": "Quatro evidências, em contextos distintos, tratam do mesmo eixo: um resultado só se sustenta se for visível e confiável internamente. EV-0016 relata o caso concreto de um ciclo mais impactante e mais difícil de defender; EV-0015 e EV-0009 generalizam o problema de incentivos e de visibilidade; EV-0002 aponta a tradução de dado em decisão confiável.",
+      "o_que_permanece_desconhecido": "Se a pessoa efetivamente conseguiu sustentar o ciclo de reinvestimento até o fim ou se ele foi interrompido; quais stakeholders precisou convencer; que argumentos e instrumentos usou; e qual foi o desfecho real.",
+      "perguntas_validacao": [
+        "No ciclo focado em reinvestimento, quem precisava ser convencido e o que você apresentou para sustentá-lo? Ele chegou ao fim ou foi cortado?",
+        "Quais métricas intermediárias você usou para dar visibilidade a um resultado que demorava a aparecer?",
+        "Você já teve uma iniciativa encerrada por desalinhamento com incentivos de curto prazo? O que faria diferente?"
+      ],
+      "contradicao_entre_evidencias_citadas": false,
+      "confianca": "Alta"
+    },
+    {
+      "id_hipotese": "H4",
+      "descricao": "A pessoa pode ter exercido liderança de time com preferência declarada por estruturas de aprendizado informais e entre pares, tendo participado da criação de ao menos um programa de mentoria antes de existir processo formal.",
+      "evidencias_citadas": [
+        "EV-0006",
+        "EV-0012",
+        "EV-0013"
+      ],
+      "contexto": "EV-0006 afirma liderança de time e um modelo de mentoria que funcionou; EV-0012 descreve a implementação em primeira pessoa do plural e compara adesão com treinamentos posteriores; EV-0013 consolida a tese em artigo.",
+      "o_que_permanece_desconhecido": "Nível e tamanho da liderança (líder direto, tech lead, gestor de gestores), se era liderança formal ou de fato, número de pessoas, duração, e se a pessoa liderou a criação do programa ou apenas participou dele. Também não sabemos como mediu 'adesão'.",
+      "perguntas_validacao": [
+        "Quantas pessoas você liderou, em que estrutura, e por quanto tempo? Era liderança formal?",
+        "No programa de mentoria entre pares, qual foi exatamente o seu papel: idealização, execução, patrocínio?",
+        "Como vocês mediram adesão e resultado do programa? O que você mudaria se fosse rodar de novo?",
+        "Em que situações você acha que a mentoria entre pares não funciona e um especialista é necessário?"
+      ],
+      "contradicao_entre_evidencias_citadas": false,
+      "confianca": "Alta"
+    },
+    {
+      "id_hipotese": "H5",
+      "descricao": "A pessoa pode ter tido uma experiência de empreendedorismo que antecede ou coexiste com atuação em produto, e que ela usa como referência explícita de critério de decisão.",
+      "evidencias_citadas": [
+        "EV-0014",
+        "EV-0008"
+      ],
+      "contexto": "EV-0014 afirma diretamente 'empreender do zero' e contrasta esse aprendizado com o que 'nenhum cargo de produto ensina', derivando o princípio de validação rápida de hipóteses. EV-0008 reforça a preferência por problema real sobre elegância técnica, coerente com esse enquadramento.",
+      "o_que_permanece_desconhecido": "Que negócio foi esse, em que período, por quanto tempo, se teve sócios, qual o desfecho (venda, encerramento, continuidade) e se ocorreu antes, durante ou depois das experiências de produto citadas nas demais evidências.",
+      "perguntas_validacao": [
+        "Que negócio você empreendeu, em que período, e como ele terminou?",
+        "Em que ordem sua trajetória se deu: empreendedorismo antes ou depois dos cargos de produto?",
+        "Qual decisão errada nesse negócio te custou mais caro, e o que ela mudou na sua forma de trabalhar?"
+      ],
+      "contradicao_entre_evidencias_citadas": false,
+      "confianca": "Média"
+    },
+    {
+      "id_hipotese": "H6",
+      "descricao": "Pode haver uma tensão real, ainda não resolvida pelas fontes, entre o critério de descarte rápido de hipóteses que a pessoa declara e a defesa de uma iniciativa de maturação lenta que ela relata ter liderado.",
+      "evidencias_citadas": [
+        "EV-0014",
+        "EV-0016"
+      ],
+      "contexto": "EV-0014 (nov/2024) afirma que cada hipótese 'tem que provar valor rápido, ou é descartada'. EV-0016 (mar/2025) relata a defesa de um ciclo cujo resultado 'demorava mais para aparecer' e que por isso era difícil de sustentar internamente. As duas posições são declaradas pela mesma pessoa com quatro meses de intervalo.",
+      "o_que_permanece_desconhecido": "Se a pessoa distingue entre velocidade de validação de sinal e velocidade de resultado financeiro; se houve mudança de posição no intervalo; ou se são princípios aplicáveis a contextos diferentes. As fontes não permitem decidir e a tensão é preservada como está.",
+      "perguntas_validacao": [
+        "Como você concilia 'provar valor rápido' com iniciativas cujo retorno leva meses para aparecer?",
+        "No ciclo de reinvestimento, que sinais de curto prazo você usou para se convencer de que valia continuar?",
+        "Existe algum caso em que você descartou uma hipótese rápido demais e depois se arrependeu?"
+      ],
+      "contradicao_entre_evidencias_citadas": true,
+      "confianca": "Média"
+    },
+    {
+      "id_hipotese": "H7",
+      "descricao": "A pessoa pode operar preferencialmente na fronteira entre dados e negócio — como tradutora de evidência em decisão — mais do que como produtora ou consumidora técnica de análise.",
+      "evidencias_citadas": [
+        "EV-0002",
+        "EV-0009",
+        "EV-0007"
+      ],
+      "contexto": "EV-0002 localiza o problema na tradução do dado em decisão confiável, não na sua produção; EV-0009 discute o uso político-comunicacional de métricas; EV-0007 descreve intervenção baseada em jornada de decisão. Nenhuma das três descreve construção de modelo, pipeline ou análise técnica.",
+      "o_que_permanece_desconhecido": "Qual o nível real de proficiência técnica em dados (SQL, modelagem, experimentação) e se a ausência desse tipo de menção reflete falta de habilidade, escolha editorial de conteúdo ou simplesmente não ter sido tema dos posts. Não sabemos.",
+      "perguntas_validacao": [
+        "Qual é o seu nível de mão na massa com dados: você consulta, modela, ou depende de um time de dados?",
+        "Descreva uma análise que você mesmo conduziu e que mudou uma decisão de produto.",
+        "Como você desenhou o experimento que testava a hipótese de reinvestimento como sinal de risco?"
+      ],
+      "contradicao_entre_evidencias_citadas": false,
+      "confianca": "Média"
+    }
+  ],
+  "hipoteses_rejeitadas_por_citacao_invalida": [],
+  "perguntas_entrevista": [
+    "Reconstrua sua linha do tempo profissional dos últimos cinco anos: empresas, cargos, períodos e escopo de cada um.",
+    "Você menciona ter liderado dois ciclos de produto, um sobre inadimplência e outro sobre reinvestimento. Pode detalhar cada um: hipótese inicial, o que foi construído, quanto tempo levou e como o resultado foi medido?",
+    "O que exatamente significou 'mais impacto financeiro' no segundo ciclo? Que número você usaria hoje para sustentar essa afirmação?",
+    "A tese de que reinvestimento é um sinal de risco chegou a virar modelo ou política de crédito? Se sim, como foi validada? Se não, o que impediu?",
+    "Como você descobriu que o comportamento de reinvestimento importava? Foi pesquisa qualitativa, análise de dados, observação de campo?",
+    "Você mudou de ideia publicamente sobre scoring. Que outra convicção sua mudou nos últimos dois anos, e o que a fez mudar?",
+    "Sobre a ferramenta de gestão financeira para público não bancarizado: qual era o tamanho da base, quais eram as principais métricas e qual era a sua responsabilidade direta?",
+    "Como você conciliou o princípio de descartar hipóteses que não provam valor rápido com a defesa de uma iniciativa de retorno lento?",
+    "Descreva o programa de mentoria entre pares: quem o idealizou, quantas pessoas participaram, como a adesão foi medida e o que aconteceu com ele depois.",
+    "Quantas pessoas você liderou e em que estrutura? Você fazia gestão de carreira, avaliação e contratação?",
+    "Você comenta que empresas têm incentivos desalinhados com mudanças de abordagem. Conte uma situação concreta em que isso te afetou e como você reagiu.",
+    "Qual é o seu nível de autonomia técnica com dados e ferramentas? Onde você precisa de apoio?",
+    "Você menciona ter empreendido do zero. Que negócio foi esse, quando, e como terminou?",
+    "Que crítica você já recebeu de pares ou lideranças sobre a sua forma de trabalhar, e o que fez com ela?",
+    "Qual desses temas que você publicou você hoje reescreveria de outra forma, e por quê?",
+    "Que tipo de problema ou contexto você está buscando agora, e o que precisaria estar presente para você considerar o trabalho bem-sucedido?"
+  ],
+  "limitacoes_da_analise": "Esta análise se apoia em 17 evidências de uma única plataforma (LinkedIn) e de um único tipo de fonte: conteúdo autoral e público, produzido pela própria pessoa. Como o contexto das evidências registra, a exportação nativa do LinkedIn não inclui comentários recebidos, o que elimina qualquer contraponto externo, validação de pares ou reação ao que foi publicado. Não há currículo, histórico de cargos, referências, avaliações, portfólio, dados quantitativos ou documentos de trabalho. Todas as afirmações sobre liderança, escopo e resultado são autodeclaradas e não verificáveis por este material. O recorte temporal cobre fev/2023 a mai/2025, e nada pode ser afirmado sobre períodos anteriores ou posteriores. Publicar sobre um tema não comprova competência nele, e não publicar sobre um tema não indica ausência de competência — a ausência de menções técnicas, de métricas ou de outros domínios pode refletir escolha editorial e não limitação real. Este documento não avalia adequação a vaga, não classifica a pessoa, não infere traços de personalidade nem atributos pessoais, e não recomenda decisão de contratação. As hipóteses são pistas investigativas a serem confirmadas ou descartadas em entrevista pelo recrutador, cujo julgamento permanece soberano.",
+  "_meta": {
+    "modelo": "claude-opus-5",
+    "total_evidencias": 17
+  }
+}
