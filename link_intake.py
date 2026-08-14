@@ -22,6 +22,7 @@ from extractor import extrair_texto_de_html
 TAMANHO_MAX_BYTES = 5 * 1024 * 1024  # 5 MB
 TIMEOUT_SEGUNDOS = 10
 TAMANHO_MAX_TRECHO = 4000
+TAMANHO_MINIMO_CORPO = 40  # abaixo disso, é sinal de página que só carrega conteúdo via JS
 USER_AGENT = "Mozilla/5.0 (compatible; AgenteInvestigativoNivel0/1.0)"
 
 
@@ -69,9 +70,14 @@ def buscar_evidencia_de_link(url: str) -> tuple[dict | None, str | None]:
         return None, f"Link ignorado ({erro} — comum em links do Google Drive/OneDrive): {url}"
 
     titulo, corpo = extrair_texto_de_html(conteudo)
-    trecho = corpo or titulo
-    if not trecho:
-        return None, f"Link acessado, mas sem texto legível extraído (comum em links do Google Drive/OneDrive): {url}"
+    if len(corpo.strip()) < TAMANHO_MINIMO_CORPO:
+        # Corpo vazio ou quase vazio (às vezes só um título tipo "Miro", "Google Drive")
+        # é sinal de página que carrega o conteúdo real via JavaScript — não confiável.
+        return None, (
+            f"Link acessado, mas sem texto legível extraído (comum em páginas que carregam "
+            f"conteúdo via JavaScript, como Google Drive/OneDrive/Miro): {url}"
+        )
+    trecho = corpo
 
     truncado = len(trecho) > TAMANHO_MAX_TRECHO
     if truncado:
@@ -117,9 +123,9 @@ def buscar_texto_vaga(texto_ou_link: str) -> tuple[str, str | None]:
         return "", f"Não foi possível ler o link da vaga ({erro}). Cole o texto da vaga diretamente: {texto}"
 
     titulo, corpo = extrair_texto_de_html(conteudo)
-    resolvido = corpo or titulo
-    if not resolvido:
+    if len(corpo.strip()) < TAMANHO_MINIMO_CORPO:
         return "", f"Não foi possível extrair texto do link da vaga. Cole o texto da vaga diretamente: {texto}"
+    resolvido = corpo
 
     truncado = len(resolvido) > TAMANHO_MAX_TRECHO
     if truncado:

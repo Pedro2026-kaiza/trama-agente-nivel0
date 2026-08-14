@@ -183,6 +183,10 @@ if autorizado:
     ids_relevantes = sorted({eid for h in hipoteses for eid in h["evidencias_citadas"]})
     with st.expander(f"EVIDÊNCIAS MAIS RELEVANTES ({len(ids_relevantes)} citadas em hipóteses)", expanded=True):
         if ids_relevantes:
+            st.caption(
+                "As colunas de texto aparecem cortadas por causa do tamanho da célula, não porque "
+                "o conteúdo foi cortado — clique duas vezes numa célula pra ler o texto inteiro."
+            )
             st.dataframe(
                 [
                     {
