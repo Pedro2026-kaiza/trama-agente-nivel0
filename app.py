@@ -17,10 +17,13 @@ import time
 
 import streamlit as st
 
+from codigo_tracking import codigo_ja_usado, marcar_codigo_usado
 from extractor import acrescentar_evidencias
 from intake import processar_zip_linkedin
 from link_intake import buscar_evidencia_de_link, buscar_texto_vaga
+from notificacoes import notificar_conclusao
 from pipeline import montar_parecer
+from vagas_config import vaga_do_codigo
 
 
 def _rodar_com_progresso(mensagem: str, fn, *args, **kwargs):
@@ -77,8 +80,22 @@ st.divider()
 modo = st.radio("Modo", ["Candidato", "Recrutador"], horizontal=True)
 st.caption("O modo ainda não muda o comportamento do pipeline nesta fase (Nível 0).")
 
+codigo_url = st.query_params.get("codigo", "")
+vaga_pre_carregada = vaga_do_codigo(codigo_url) if codigo_url else None
+if codigo_url and not vaga_pre_carregada:
+    st.warning(f"Código \"{codigo_url}\" não reconhecido — preencha o contexto da vaga manualmente.")
+elif vaga_pre_carregada:
+    st.info(f"Vaga carregada automaticamente para o código **{codigo_url.upper()}** (nível {vaga_pre_carregada['nome']}).")
+    if codigo_ja_usado(codigo_url):
+        st.error(
+            "Este link já foi utilizado. Se você acredita que isso é um engano, entre em "
+            "contato com quem te enviou o convite."
+        )
+        st.stop()
+
 contexto_vaga = st.text_area(
     "Contexto da vaga (opcional)",
+    value=vaga_pre_carregada["texto"] if vaga_pre_carregada else "",
     placeholder=(
         "Você pode preencher este campo de dois jeitos:\n"
         "1. Cole aqui o texto completo da descrição da vaga; ou\n"
@@ -154,6 +171,10 @@ if autorizado:
     except Exception as e:
         st.error(f"Falha ao gerar o parecer: {e}")
         st.stop()
+
+    if vaga_pre_carregada:
+        marcar_codigo_usado(codigo_url)
+        notificar_conclusao(codigo_url, vaga_pre_carregada["nome"])
 
     st.divider()
     st.header(f"PARECER INVESTIGATIVO — {modo.upper()}")
