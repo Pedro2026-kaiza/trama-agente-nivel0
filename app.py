@@ -77,21 +77,33 @@ st.write(
 
 st.divider()
 
-modo = st.radio("Modo", ["Candidato", "Recrutador"], horizontal=True)
-st.caption("O modo ainda não muda o comportamento do pipeline nesta fase (Nível 0).")
-
+# Gate de acesso: esta é uma ferramenta fechada por convite nesta fase de testes.
+# Sem código válido e ainda não usado, ninguém passa daqui — evita que o link, se
+# vazar, gere chamadas reais (e cobradas) à API por qualquer pessoa sem convite.
 codigo_url = st.query_params.get("codigo", "")
 vaga_pre_carregada = vaga_do_codigo(codigo_url) if codigo_url else None
-if codigo_url and not vaga_pre_carregada:
-    st.warning(f"Código \"{codigo_url}\" não reconhecido — preencha o contexto da vaga manualmente.")
-elif vaga_pre_carregada:
-    st.info(f"Vaga carregada automaticamente para o código **{codigo_url.upper()}** (nível {vaga_pre_carregada['nome']}).")
-    if codigo_ja_usado(codigo_url):
+
+if not vaga_pre_carregada:
+    if codigo_url:
         st.error(
-            "Este link já foi utilizado. Se você acredita que isso é um engano, entre em "
-            "contato com quem te enviou o convite."
+            f"Código \"{codigo_url}\" não reconhecido. Verifique o link que você recebeu, "
+            "ou entre em contato com quem te convidou."
         )
-        st.stop()
+    else:
+        st.error("Este é um teste fechado, por convite. Acesse pelo link com o código que você recebeu.")
+    st.stop()
+
+if codigo_ja_usado(codigo_url):
+    st.error(
+        "Este link já foi utilizado. Se você acredita que isso é um engano, entre em "
+        "contato com quem te enviou o convite."
+    )
+    st.stop()
+
+st.info(f"Vaga carregada automaticamente para o código **{codigo_url.upper()}** (nível {vaga_pre_carregada['nome']}).")
+
+modo = st.radio("Modo", ["Candidato", "Recrutador"], horizontal=True)
+st.caption("O modo ainda não muda o comportamento do pipeline nesta fase (Nível 0).")
 
 contexto_vaga = st.text_area(
     "Contexto da vaga (opcional)",
