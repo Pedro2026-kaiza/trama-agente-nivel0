@@ -23,7 +23,7 @@ from intake import processar_zip_linkedin
 from link_intake import buscar_evidencia_de_link, buscar_texto_vaga
 from notificacoes import notificar_conclusao
 from pipeline import montar_parecer
-from vagas_config import vaga_do_codigo
+from vagas_config import grupo_do_codigo
 
 
 def _rodar_com_progresso(mensagem: str, fn, *args, **kwargs):
@@ -80,10 +80,12 @@ st.divider()
 # Gate de acesso: esta é uma ferramenta fechada por convite nesta fase de testes.
 # Sem código válido e ainda não usado, ninguém passa daqui — evita que o link, se
 # vazar, gere chamadas reais (e cobradas) à API por qualquer pessoa sem convite.
+# O código NÃO direciona mais o contexto da vaga (decisão explícita: deixar aberto
+# para qualquer perfil) — só controla acesso e limite de 1 uso por link.
 codigo_url = st.query_params.get("codigo", "")
-vaga_pre_carregada = vaga_do_codigo(codigo_url) if codigo_url else None
+grupo = grupo_do_codigo(codigo_url) if codigo_url else None
 
-if not vaga_pre_carregada:
+if not grupo:
     if codigo_url:
         st.error(
             f"Código \"{codigo_url}\" não reconhecido. Verifique o link que você recebeu, "
@@ -100,14 +102,11 @@ if codigo_ja_usado(codigo_url):
     )
     st.stop()
 
-st.info(f"Vaga carregada automaticamente para o código **{codigo_url.upper()}** (nível {vaga_pre_carregada['nome']}).")
-
 modo = st.radio("Modo", ["Candidato", "Recrutador"], horizontal=True)
 st.caption("O modo ainda não muda o comportamento do pipeline nesta fase (Nível 0).")
 
 contexto_vaga = st.text_area(
     "Contexto da vaga (opcional)",
-    value=vaga_pre_carregada["texto"] if vaga_pre_carregada else "",
     placeholder=(
         "Você pode preencher este campo de dois jeitos:\n"
         "1. Cole aqui o texto completo da descrição da vaga; ou\n"
@@ -184,9 +183,9 @@ if autorizado:
         st.error(f"Falha ao gerar o parecer: {e}")
         st.stop()
 
-    if vaga_pre_carregada:
-        marcar_codigo_usado(codigo_url)
-        notificar_conclusao(codigo_url, vaga_pre_carregada["nome"])
+    # Chegou até aqui só com código válido e não usado (gate no topo) — sempre marca e notifica.
+    marcar_codigo_usado(codigo_url)
+    notificar_conclusao(codigo_url, grupo)
 
     st.divider()
     st.header(f"PARECER INVESTIGATIVO — {modo.upper()}")
