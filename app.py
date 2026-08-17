@@ -184,7 +184,7 @@ if autorizado:
         st.stop()
 
     # Chegou até aqui só com código válido e não usado (gate no topo) — sempre marca e notifica.
-    marcar_codigo_usado(codigo_url)
+    marcar_codigo_usado(codigo_url, resultado=resultado)
     notificar_conclusao(codigo_url, grupo)
 
     st.divider()
