@@ -13,9 +13,13 @@ GRUPOS = {
     "M": "Pleno/Middle",
     "S": "Sênior",
     "T": "Teste interno (Pedro)",
+    # Uso pessoal do Pedro (não é um dos 15 testadores) — igual ao T1, nunca tem
+    # linha correspondente na planilha, então codigo_ja_usado() sempre volta False:
+    # dá pra rodar quantas análises quiser, à vontade, sem "gastar" nada.
+    "P": "Uso pessoal (Pedro)",
 }
 
-CODIGOS_VALIDOS = [f"{letra}{numero}" for letra in "JMS" for numero in range(1, 6)] + ["T1"]
+CODIGOS_VALIDOS = [f"{letra}{numero}" for letra in "JMSP" for numero in range(1, 6)] + ["T1"]
 
 
 def grupo_do_codigo(codigo: str) -> str | None:
