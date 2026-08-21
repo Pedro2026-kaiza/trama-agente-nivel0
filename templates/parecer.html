@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    @page {
+        size: A4;
+        margin: 2.2cm 1.8cm;
+    }
+    body {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 10pt;
+        color: #1a1a1a;
+        line-height: 1.45;
+    }
+    h1 {
+        font-size: 18pt;
+        color: #14213d;
+        margin-bottom: 0;
+    }
+    .subtitulo {
+        font-size: 9pt;
+        color: #666666;
+        margin-top: 2px;
+        margin-bottom: 14px;
+    }
+    .meta-box {
+        background-color: #f2f4f7;
+        border: 1pt solid #d8dce3;
+        padding: 8px 12px;
+        margin-bottom: 16px;
+        font-size: 9pt;
+    }
+    h2 {
+        font-size: 12.5pt;
+        color: #14213d;
+        border-bottom: 1pt solid #c9cfd8;
+        padding-bottom: 3px;
+        margin-top: 20px;
+        margin-bottom: 8px;
+        page-break-after: avoid;
+    }
+    p {
+        margin: 4px 0 10px 0;
+        text-align: justify;
+    }
+    ul {
+        margin: 4px 0 10px 0;
+        padding-left: 16px;
+    }
+    li {
+        margin-bottom: 4px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 12px;
+        font-size: 9pt;
+    }
+    th {
+        background-color: #eef1f5;
+        text-align: left;
+        padding: 4px 6px;
+        border: 0.5pt solid #c9cfd8;
+    }
+    td {
+        padding: 4px 6px;
+        border: 0.5pt solid #c9cfd8;
+        vertical-align: top;
+    }
+    .hipotese {
+        border: 1pt solid #d8dce3;
+        padding: 8px 10px;
+        margin-bottom: 10px;
+        page-break-inside: avoid;
+    }
+    .hipotese-titulo {
+        font-size: 10.5pt;
+        font-weight: bold;
+        margin-bottom: 4px;
+    }
+    .selo {
+        display: inline;
+        padding: 2px 7px;
+        font-size: 8pt;
+        font-weight: bold;
+        color: #ffffff;
+        border-radius: 3px;
+    }
+    .selo-alta {
+        background-color: #1e7e34;
+    }
+    .selo-media {
+        background-color: #b8860b;
+    }
+    .campo-label {
+        font-weight: bold;
+        font-size: 8.5pt;
+        color: #444444;
+        margin-top: 6px;
+    }
+    .ids-evidencia {
+        font-family: Courier, monospace;
+        font-size: 8.5pt;
+        color: #14213d;
+    }
+    .aviso-contradicao {
+        color: #b8860b;
+        font-size: 8.5pt;
+        font-style: italic;
+        margin-top: 4px;
+    }
+    .rodape-nota {
+        font-size: 8pt;
+        color: #888888;
+        margin-top: 24px;
+        border-top: 0.5pt solid #d8dce3;
+        padding-top: 6px;
+    }
+</style>
+</head>
+<body>
+
+<h1>PARECER INVESTIGATIVO</h1>
+<div class="subtitulo">Agente Investigativo de Trajetórias Profissionais &mdash; Nível 0</div>
+
+<div class="meta-box">
+    Gerado em {{ gerado_em }} &middot;
+    {{ meta.total_evidencias | default('?') }} evidências analisadas &middot;
+    modelo {{ meta.modelo | default('?') }}
+</div>
+
+<h2>A. Contexto da análise</h2>
+<p>{{ resultado.contexto_analise or "—" }}</p>
+
+{% if resultado.leitura_vs_contexto_da_vaga %}
+<h2>Leitura em relação ao contexto da vaga</h2>
+<p>{{ resultado.leitura_vs_contexto_da_vaga }}</p>
+{% endif %}
+
+<h2>B. Evidências observadas</h2>
+{% if resultado.evidencias_observadas %}
+<table>
+    <tr><th style="width: 12%;">ID</th><th>Observação</th></tr>
+    {% for e in resultado.evidencias_observadas %}
+    <tr><td class="ids-evidencia">{{ e.id }}</td><td>{{ e.observacao }}</td></tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>—</p>
+{% endif %}
+
+<h2>C. Padrões emergentes</h2>
+{% if resultado.padroes_emergentes %}
+<ul>
+    {% for p in resultado.padroes_emergentes %}
+    <li>{{ p }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>—</p>
+{% endif %}
+
+<h2>D. Narrativa profissional</h2>
+<p>{{ resultado.narrativa_profissional or "—" }}</p>
+
+<h2>E. Forças evidenciadas</h2>
+{% if resultado.forcas_evidenciadas %}
+<ul>
+    {% for f in resultado.forcas_evidenciadas %}
+    <li>{{ f }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>—</p>
+{% endif %}
+
+<h2>F. Tensões e lacunas</h2>
+{% if resultado.tensoes_e_lacunas %}
+<ul>
+    {% for t in resultado.tensoes_e_lacunas %}
+    <li>{{ t }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>—</p>
+{% endif %}
+
+<h2>G. Hipóteses para validação</h2>
+{% if hipoteses %}
+    {% for h in hipoteses %}
+    <div class="hipotese">
+        <div class="hipotese-titulo">
+            {{ h.id_hipotese }} &mdash;
+            <span class="selo {{ 'selo-alta' if h.confianca == 'Alta' else 'selo-media' }}">
+                Confiança {{ h.confianca }}
+            </span>
+        </div>
+        <p>{{ h.descricao }}</p>
+        <div class="campo-label">Evidências citadas</div>
+        <div class="ids-evidencia">{{ h.evidencias_citadas | join(', ') }}</div>
+        <div class="campo-label">Contexto</div>
+        <p>{{ h.contexto or "—" }}</p>
+        <div class="campo-label">O que permanece desconhecido</div>
+        <p>{{ h.o_que_permanece_desconhecido or "—" }}</p>
+        <div class="campo-label">Perguntas de validação</div>
+        <ul>
+            {% for q in h.perguntas_validacao %}
+            <li>{{ q }}</li>
+            {% endfor %}
+        </ul>
+        {% if h.contradicao_entre_evidencias_citadas %}
+        <div class="aviso-contradicao">&#9888; O modelo sinalizou contradição entre as evidências citadas nesta hipótese.</div>
+        {% endif %}
+    </div>
+    {% endfor %}
+{% else %}
+<p>Nenhuma hipótese com evidência suficiente.</p>
+{% endif %}
+
+{% if hipoteses_rejeitadas %}
+<p class="rodape-nota">
+    {{ hipoteses_rejeitadas | length }} hipótese(s) descartada(s) na checagem de citação
+    (ID de evidência inexistente) &mdash; não incluídas acima.
+</p>
+{% endif %}
+
+<h2>H. Perguntas de entrevista</h2>
+{% if resultado.perguntas_entrevista %}
+<ul>
+    {% for q in resultado.perguntas_entrevista %}
+    <li>{{ q }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>—</p>
+{% endif %}
+
+<h2>I. Limitações da análise</h2>
+<p>{{ resultado.limitacoes_da_analise or "—" }}</p>
+
+<div class="rodape-nota">
+    Este documento é uma camada de apresentação sobre o parecer estruturado (JSON) &mdash;
+    ele continua sendo a fonte de verdade. Hipóteses são pistas investigativas para
+    validação em entrevista, não conclusões sobre o candidato.
+</div>
+
+</body>
+</html>
