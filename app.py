@@ -22,6 +22,7 @@ from extractor import acrescentar_evidencias
 from intake import processar_zip_linkedin
 from link_intake import buscar_evidencia_de_link, buscar_texto_vaga
 from notificacoes import notificar_conclusao
+from pdf_export import gerar_pdf_bytes
 from pipeline import montar_parecer
 from vagas_config import grupo_do_codigo
 
@@ -285,9 +286,23 @@ if autorizado:
         st.write(resultado.get("limitacoes_da_analise") or "—")
 
     st.divider()
-    st.download_button(
-        "Baixar parecer completo (JSON)",
-        data=json.dumps(resultado, ensure_ascii=False, indent=2),
-        file_name="parecer.json",
-        mime="application/json",
-    )
+
+    col_pdf, col_json = st.columns(2)
+    with col_pdf:
+        try:
+            pdf_bytes = gerar_pdf_bytes(resultado)
+            st.download_button(
+                "Baixar parecer em PDF",
+                data=pdf_bytes,
+                file_name="parecer.pdf",
+                mime="application/pdf",
+            )
+        except Exception as e:
+            st.warning(f"Não foi possível gerar o PDF ({e}). O JSON continua disponível ao lado.")
+    with col_json:
+        st.download_button(
+            "Baixar parecer completo (JSON)",
+            data=json.dumps(resultado, ensure_ascii=False, indent=2),
+            file_name="parecer.json",
+            mime="application/json",
+        )
