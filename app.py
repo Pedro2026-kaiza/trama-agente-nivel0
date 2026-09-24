@@ -18,11 +18,12 @@ import time
 import streamlit as st
 
 from codigo_tracking import codigo_ja_usado, marcar_codigo_usado
-from extractor import acrescentar_evidencias
+from extractor import acrescentar_evidencias, montar_evidencias
 from intake import processar_zip_linkedin
 from link_intake import buscar_evidencia_de_link, buscar_texto_vaga
 from notificacoes import notificar_conclusao
 from pdf_export import gerar_pdf_bytes
+from pdf_intake import extrair_evidencia_de_pdf
 from pipeline import montar_parecer
 from vagas_config import grupo_do_codigo
 
@@ -117,17 +118,20 @@ contexto_vaga = st.text_area(
     height=120,
 )
 
-st.markdown("**Exportação de dados do LinkedIn** \\*")
-arquivo_zip = st.file_uploader(
-    "Envie o .zip completo da exportação de dados do LinkedIn (Configurações e Privacidade → "
-    "Privacidade de dados → Obter uma cópia dos seus dados)",
-    type="zip",
+st.markdown("**Exportação de dados do LinkedIn (ou PDF do perfil)** \\*")
+arquivo_principal = st.file_uploader(
+    "Envie o .zip completo da exportação de dados do LinkedIn, ou alternativamente um PDF "
+    "do seu perfil (Configurações e Privacidade → Privacidade de dados → Obter uma cópia dos "
+    "seus dados; ou, na página do seu perfil, Mais → Salvar como PDF)",
+    type=["zip", "pdf"],
     accept_multiple_files=False,
     label_visibility="collapsed",
 )
 st.caption(
-    "Aceitamos o .zip completo do LinkedIn — nosso sistema lê automaticamente apenas os "
-    "arquivos relacionados à sua trajetória profissional e descarta o resto sem processar ou armazenar."
+    "**.zip** (recomendado): o export completo do LinkedIn — nosso sistema lê automaticamente "
+    "apenas os arquivos relacionados à sua trajetória profissional e descarta o resto sem "
+    "processar ou armazenar. **.pdf**: mais simples de gerar, mas mais raso — só traz o que "
+    "aparece na tela do perfil hoje, sem histórico de posts, comentários ou artigos."
 )
 
 col1, col2 = st.columns(2)
@@ -145,28 +149,37 @@ st.caption(
 autorizado = st.button(
     "Autorizar análise e iniciar investigação",
     type="primary",
-    disabled=arquivo_zip is None,
+    disabled=arquivo_principal is None,
 )
 
 if autorizado:
     with st.spinner("Extraindo evidências..."):
-        try:
-            evidencias, contexto_nao_citavel = processar_zip_linkedin(io.BytesIO(arquivo_zip.getvalue()))
-        except FileNotFoundError:
-            st.error(
-                "Não encontramos nenhum arquivo relacionado à sua atividade no LinkedIn dentro "
-                "desse .zip (posts, comentários, cargos, formação, certificados, projetos ou "
-                "artigos). Isso costuma acontecer quando se baixa a exportação **rápida/resumida** "
-                "em vez da **completa**.\n\n"
-                "No LinkedIn: Configurações e Privacidade → Privacidade de dados → Obter uma cópia "
-                "dos seus dados → escolha a opção que baixa **todos os seus dados** (o arquivo "
-                "maior), não uma seleção específica. Pode levar alguns minutos para o LinkedIn "
-                "preparar o arquivo. Depois, tente de novo com o mesmo link — ele ainda não foi usado."
-            )
-            st.stop()
-        except Exception as e:
-            st.error(f"Falha na extração: {e}")
-            st.stop()
+        if arquivo_principal.name.lower().endswith(".pdf"):
+            bruto_pdf, aviso_pdf = extrair_evidencia_de_pdf(arquivo_principal.getvalue(), arquivo_principal.name)
+            if not bruto_pdf:
+                st.error(aviso_pdf or "Não foi possível extrair texto legível do PDF enviado.")
+                st.stop()
+            evidencias = montar_evidencias([bruto_pdf])
+            contexto_nao_citavel = ""
+        else:
+            try:
+                evidencias, contexto_nao_citavel = processar_zip_linkedin(io.BytesIO(arquivo_principal.getvalue()))
+            except FileNotFoundError:
+                st.error(
+                    "Não encontramos nenhum arquivo relacionado à sua atividade no LinkedIn dentro "
+                    "desse .zip (posts, comentários, cargos, formação, certificados, projetos ou "
+                    "artigos). Isso costuma acontecer quando se baixa a exportação **rápida/resumida** "
+                    "em vez da **completa**, ou quando o .zip enviado não é o do LinkedIn.\n\n"
+                    "No LinkedIn: Configurações e Privacidade → Privacidade de dados → Obter uma cópia "
+                    "dos seus dados → escolha a opção que baixa **todos os seus dados** (o arquivo "
+                    "maior), não uma seleção específica. Pode levar alguns minutos para o LinkedIn "
+                    "preparar o arquivo. Alternativa mais simples: envie um **PDF do seu perfil** "
+                    "em vez do .zip. Depois, tente de novo com o mesmo link — ele ainda não foi usado."
+                )
+                st.stop()
+            except Exception as e:
+                st.error(f"Falha na extração: {e}")
+                st.stop()
 
         brutos_links = []
         for link in (outra_fonte_1, outra_fonte_2):
