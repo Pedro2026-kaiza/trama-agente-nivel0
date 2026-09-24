@@ -152,6 +152,18 @@ if autorizado:
     with st.spinner("Extraindo evidências..."):
         try:
             evidencias, contexto_nao_citavel = processar_zip_linkedin(io.BytesIO(arquivo_zip.getvalue()))
+        except FileNotFoundError:
+            st.error(
+                "Não encontramos nenhum arquivo relacionado à sua atividade no LinkedIn dentro "
+                "desse .zip (posts, comentários, cargos, formação, certificados, projetos ou "
+                "artigos). Isso costuma acontecer quando se baixa a exportação **rápida/resumida** "
+                "em vez da **completa**.\n\n"
+                "No LinkedIn: Configurações e Privacidade → Privacidade de dados → Obter uma cópia "
+                "dos seus dados → escolha a opção que baixa **todos os seus dados** (o arquivo "
+                "maior), não uma seleção específica. Pode levar alguns minutos para o LinkedIn "
+                "preparar o arquivo. Depois, tente de novo com o mesmo link — ele ainda não foi usado."
+            )
+            st.stop()
         except Exception as e:
             st.error(f"Falha na extração: {e}")
             st.stop()
